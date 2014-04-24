@@ -24,7 +24,7 @@ for y in xrange(im.size[1]):
 
         if counter < len(text_in_binary):
             binary = list(bin(R))
-            binary[7] = text_in_binary[counter]
+            binary[7 + 2] = text_in_binary[counter]
 
             R = int("".join(binary), 2)
 
@@ -32,7 +32,7 @@ for y in xrange(im.size[1]):
 
         if counter < len(text_in_binary):
             binary = list(bin(G))
-            binary[7] = text_in_binary[counter]
+            binary[7 + 2] = text_in_binary[counter]
 
             G = int("".join(binary), 2)
 
@@ -40,7 +40,7 @@ for y in xrange(im.size[1]):
 
         if counter < len(text_in_binary):
             binary = list(bin(B))
-            binary[7] = text_in_binary[counter]
+            binary[7 + 2] = text_in_binary[counter]
 
             B = int("".join(binary), 2)
 
