@@ -19,20 +19,38 @@ pixels = im.load()
 counter = 2;
 
 for y in xrange(im.size[1]):
-  for x in xrange(im.size[0]):
-  	if counter < len(text_in_binary):
-	    R,G,B = pixels[x,y]
+    for x in xrange(im.size[0]):
+        R,G,B = pixels[x,y]
 
-	    R_in_bin = list(bin(R))
-	    R_in_bin[7] = text_in_binary[counter]
+        if counter < len(text_in_binary):
+            binary = list(bin(R))
+            binary[7] = text_in_binary[counter]
 
-	    R = int("".join(R_in_bin), 2)
+            R = int("".join(binary), 2)
 
-	    pixels[x,y] = R,G,B
+            counter += 1
 
-	    counter += 1
+        if counter < len(text_in_binary):
+            binary = list(bin(G))
+            binary[7] = text_in_binary[counter]
 
-	    
+            G = int("".join(binary), 2)
+
+            counter += 1
+
+        if counter < len(text_in_binary):
+            binary = list(bin(B))
+            binary[7] = text_in_binary[counter]
+
+            B = int("".join(binary), 2)
+
+            counter += 1
+
+        pixels[x,y] = R,G,B
+
+
+
+
 
 im.save(fnOutput)
 print("Completed")
