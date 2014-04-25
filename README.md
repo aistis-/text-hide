@@ -1,2 +1,1 @@
-text-hide
-=========
+It is a task for 2014 Erasmus+ intensive program in Portugal. It encodes a text string into an image using the least significant bit of image pixels removal. That bit is replaced with binary code of the text.
