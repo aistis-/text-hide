@@ -2,7 +2,7 @@
 
 import Image, binascii
 
-fnInput ="picture_out1.png"
+fnInput = "picture_out.png"
 
 im = Image.open(fnInput)
 print "Opened ", im.format, im.size, im.mode
@@ -24,7 +24,6 @@ for y in xrange(im.size[1]):
             text_in_binary.append(binary[7 + 2])
         except IndexError:
             break;
-
 
 for counter in range(len(text_in_binary) - 1):
     char_in_bin = ['0', 'b']

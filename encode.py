@@ -2,11 +2,8 @@
 
 import Image, binascii
 
-# "Remove" least significant bits in the image file
-
-fnInput ="picture.png"
-nb=1 # number of least signif. bits to remove 
-fnOutput="picture_out%d.png" % nb 
+fnInput = "picture.png"
+fnOutput = "picture_out.png" % nb 
 
 text_to_encode = "Some text 123"
 text_in_binary = bin(int(binascii.hexlify(text_to_encode), 16))
@@ -47,10 +44,6 @@ for y in xrange(im.size[1]):
             counter += 1
 
         pixels[x,y] = R,G,B
-
-
-
-
 
 im.save(fnOutput)
 print("Completed")
