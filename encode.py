@@ -3,7 +3,7 @@
 import Image, binascii
 
 fnInput = "picture.png"
-fnOutput = "picture_out.png" % nb 
+fnOutput = "picture_out.png"
 
 text_to_encode = "Some text 123"
 text_in_binary = bin(int(binascii.hexlify(text_to_encode), 16))
